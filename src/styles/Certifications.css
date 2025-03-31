@@ -1,0 +1,131 @@
+.certifications-container {
+    padding: 100px 0;
+  }
+  
+  .certifications-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .cert-section {
+    background-color: var(--bg-primary);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cert-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cert-section h3 {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    color: var(--teal-7);
+  }
+  
+  .cert-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--teal-5);
+  }
+  
+  .cert-list {
+    padding-left: 1.5rem;
+  }
+  
+  .cert-list li {
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+    position: relative;
+  }
+  
+  .cert-list li::before {
+    content: "•";
+    color: var(--teal-6);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  .achievements-section {
+    background-color: var(--bg-primary);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .achievements-section h3 {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    color: var(--teal-7);
+  }
+  
+  .achievements-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--teal-5);
+  }
+  
+  .achievements-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .achievement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .achievement-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+  
+  .achievement-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 992px) {
+    .achievements-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .certifications-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .cert-section, .achievements-section {
+      padding: 20px;
+    }
+  }

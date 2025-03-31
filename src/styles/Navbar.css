@@ -1,0 +1,122 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: var(--transition);
+  }
+  
+  .navbar.scrolled {
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow);
+    padding: 15px 0;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .logo-text {
+    background: linear-gradient(to right, var(--teal-5), var(--teal-7));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: var(--transition);
+  }
+  
+  .nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: var(--text-primary);
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+  }
+  
+  .nav-links a:hover {
+    color: var(--teal-5);
+  }
+  
+  .nav-links a.active {
+    color: var(--teal-6);
+  }
+  
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--teal-6);
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+    transition: var(--transition);
+  }
+  
+  /* Mobile menu styles */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+    
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: var(--bg-primary);
+      padding-top: 80px;
+      transition: var(--transition);
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+    
+    .nav-links.active {
+      right: 0;
+    }
+    
+    .nav-links ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .menu-toggle.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }

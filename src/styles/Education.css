@@ -1,0 +1,121 @@
+.education-container {
+    padding: 100px 0;
+  }
+  
+  .education-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+  }
+  
+  .education-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .education-timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--teal-3);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-left: 20px;
+    border-radius: 10px;
+  }
+  
+  .education-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 60px;
+  }
+  
+  .education-item::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 14px;
+    top: 20px;
+    background-color: var(--teal-6);
+    border: 4px solid var(--teal-1);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .education-content {
+    background-color: var(--bg-primary);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .education-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .education-type {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: var(--teal-1);
+    color: var(--teal-7);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .education-content h3 {
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+  }
+  
+  .education-info {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+  }
+  
+  .education-institution {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  
+  .education-location, .education-period {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .education-grade {
+    display: inline-block;
+    padding: 6px 15px;
+    background-color: var(--teal-6);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .education-timeline::before {
+      left: 0;
+    }
+    
+    .education-item {
+      padding-left: 40px;
+    }
+    
+    .education-item::before {
+      left: -6px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .education-content {
+      padding: 20px;
+    }
+  }

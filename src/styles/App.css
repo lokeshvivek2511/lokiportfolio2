@@ -1,0 +1,26 @@
+.app {
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  main {
+    min-height: 100vh;
+  }
+  
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  section:nth-child(even) {
+    background-color: var(--bg-secondary);
+  }
+  
+  @media (max-width: 768px) {
+    section {
+      min-height: auto;
+      padding: 60px 0;
+    }
+  }
