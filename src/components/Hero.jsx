@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import '../styles/Hero.css'
 import heroimg from "../assets/wmremove-transformed (1).jpeg"; // Adjust path if needed
-import resume from "../assets/LOKESHWARAN_RESUME.pdf"; // Adjust path if needed
+import resume from "../assets/LOKESHWARAN_RESUME_16_06_25.pdf"; // Adjust path if needed
 
 const handleDownload = () => {
   const link = document.createElement("a");

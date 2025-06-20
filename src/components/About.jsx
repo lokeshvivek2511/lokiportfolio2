@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion'
 import '../styles/About.css'
-import resume from "../assets/LOKESHWARAN_RESUME.pdf"; // Adjust path if needed
+import resume from "../assets/LOKESHWARAN_RESUME_16_06_25.pdf"; // Adjust path if needed
+
 import myimg from "../assets/WhatsApp Image 2025-03-28 at 19.20.33_eaa63333.jpg"; // Adjust path if needed
 const handleDownload = () => {
   const link = document.createElement("a");
   link.href = resume;
-  link.download = "LOKESHWARAN_RESUME.pdf";
+  link.download = "LOKESHWARAN_RESUME";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
